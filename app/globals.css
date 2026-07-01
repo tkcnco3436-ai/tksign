@@ -136,7 +136,7 @@ body {
 }
 .verified svg { color: var(--green); font-size: 15px; }
 .verified-sky { gap: 0; padding: 4px; background: transparent; }
-.verified-sky svg { color: #4fb6ef; font-size: 24px; }
+.verified-sky svg { color: #4fb6ef; font-size: 22px; }
 .icon-btn {
   width: 36px; height: 36px;
   display: grid; place-items: center;
@@ -183,7 +183,7 @@ body {
 }
 .ceo-name b {
   font-family: "Pretendard", var(--font-figtree), "Helvetica Neue", Arial, sans-serif;
-  font-size: 34px; font-weight: 400; letter-spacing: 0.5px; line-height: 1.05;
+  font-size: 34px; font-weight: 700; letter-spacing: 0.5px; line-height: 1.05;
   color: #ffffff;
 }
 .ceo-name small {
@@ -837,6 +837,6 @@ body {
 
 @media (max-width: 630px) {
   body { padding-left: 0; padding-right: 0; }
-  .ceo-name b { font-size: 26px; }
+  .ceo-name b { font-size: 28px; }
   .ceo-greet { font-size: 20px; }
 }

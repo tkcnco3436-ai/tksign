@@ -28,27 +28,6 @@ export default function Dock() {
   const ref = useRef(null);
   const [historyOpen, setHistoryOpen] = useState(false);
 
-  const magnify = (e) => {
-    const el = ref.current;
-    if (!el) return;
-    el.querySelectorAll(".dock-item").forEach((k) => {
-      const r = k.getBoundingClientRect();
-      const center = r.left + r.width / 2;
-      const dist = Math.abs(e.clientX - center);
-      const MAX = 130;
-      const s = dist > MAX ? 1 : 1 + 0.55 * (1 - dist / MAX);
-      k.style.setProperty("--s", s.toFixed(3));
-    });
-  };
-
-  const reset = () => {
-    const el = ref.current;
-    if (!el) return;
-    el.querySelectorAll(".dock-item").forEach((k) =>
-      k.style.setProperty("--s", "1")
-    );
-  };
-
   // 클릭 시 잠깐 커졌다 원상태로 (transition으로 팝 연출)
   const pop = (e) => {
     const item = e.currentTarget;
@@ -76,8 +55,6 @@ export default function Dock() {
       <nav
         className="dock"
         ref={ref}
-        onMouseMove={magnify}
-        onMouseLeave={reset}
         aria-label="연락처"
       >
         {LINKS.map((it) => (
