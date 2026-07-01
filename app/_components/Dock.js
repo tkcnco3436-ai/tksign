@@ -49,6 +49,13 @@ export default function Dock() {
     );
   };
 
+  // 클릭 시 잠깐 커졌다 원상태로 (transition으로 팝 연출)
+  const pop = (e) => {
+    const item = e.currentTarget;
+    item.style.setProperty("--s", "1.4");
+    setTimeout(() => item.style.setProperty("--s", "1"), 170);
+  };
+
   const share = async () => {
     const data = { title: "김태경 · TKC&Co.", url: window.location.href };
     try {
@@ -80,6 +87,7 @@ export default function Dock() {
             className="dock-item"
             style={{ "--s": 1 }}
             aria-label={it.title}
+            onClick={pop}
             {...(it.external
               ? { target: "_blank", rel: "noopener noreferrer" }
               : {})}
@@ -96,7 +104,10 @@ export default function Dock() {
           className="dock-item"
           style={{ "--s": 1 }}
           aria-label="공유하기"
-          onClick={share}
+          onClick={(e) => {
+            pop(e);
+            share();
+          }}
         >
           <span className="dock-tip">공유하기</span>
           <span className="dock-ico">
@@ -109,7 +120,10 @@ export default function Dock() {
           className="dock-item"
           style={{ "--s": 1 }}
           aria-label="연혁"
-          onClick={() => setHistoryOpen(true)}
+          onClick={(e) => {
+            pop(e);
+            setHistoryOpen(true);
+          }}
         >
           <span className="dock-tip">연혁</span>
           <span className="dock-ico">
