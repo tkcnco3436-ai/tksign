@@ -182,7 +182,7 @@ body {
   box-shadow: 0 0 8px rgba(79, 182, 239, 0.8);
 }
 .ceo-name b {
-  font-family: Georgia, "Times New Roman", "Nanum Myeongjo", serif;
+  font-family: "Pretendard", var(--font-figtree), "Helvetica Neue", Arial, sans-serif;
   font-size: 34px; font-weight: 400; letter-spacing: 0.5px; line-height: 1.05;
   color: #ffffff;
 }
