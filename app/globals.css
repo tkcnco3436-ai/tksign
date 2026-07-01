@@ -838,7 +838,7 @@ body {
 @media (max-width: 630px) {
   body { padding-left: 0; padding-right: 0; }
   .ceo-name b { font-size: 28px; }
-  .ceo-greet { font-size: 20px; margin: 8px 0 4px; }
+  .ceo-greet { font-size: 22px; margin: 8px 0 4px; }
   .ceo-title { margin-bottom: 4px; }
   .hero-tkceo { padding-bottom: 8px; }
 }
