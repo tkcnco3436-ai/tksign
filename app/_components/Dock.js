@@ -16,11 +16,9 @@ const LINKS = [
 
 /* 연혁 (편집 가능) */
 const HISTORY = [
-  { year: "2016", text: "태경씨앤코 설립" },
-  { year: "2019", text: "테블러(TABLER) 브랜드 런칭" },
-  { year: "2021", text: "요즘곡간(YOZMGG) 브랜드 런칭" },
-  { year: "2023", text: "요즘랩스 설립" },
-  { year: "2026", text: "소상공인 브랜드 파트너십 확대" },
+  { year: "2026", text: "요즘곡간 발효청 출시" },
+  { year: "2025", text: "태경씨앤코 설립" },
+  { year: "2025", text: "요즘 설립" },
 ];
 
 /* macOS-style dock with pointer-distance magnification (no deps) */
@@ -133,8 +131,8 @@ export default function Dock() {
           </button>
         </div>
         <ul className="timeline">
-          {HISTORY.map((h) => (
-            <li key={h.year} className="timeline-row">
+          {HISTORY.map((h, i) => (
+            <li key={i} className="timeline-row">
               <span className="timeline-year">{h.year}</span>
               <span className="timeline-dot" />
               <span className="timeline-text">{h.text}</span>
